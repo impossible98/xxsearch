@@ -1,3 +1,5 @@
+import * as process from 'process';
+
 import * as constants from '../constants/mod';
 
 export function help() {
@@ -36,4 +38,5 @@ export function help() {
     console.log('');
     console.log('  tmall: search tmall');
     console.log('');
+    process.exit(0);
 }
