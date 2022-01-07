@@ -5,6 +5,7 @@ import { help } from './help';
 
 import { bing } from './bing';
 import { douyu } from './douyu';
+import { npmjs } from './npmjs';
 import { taobao } from './taobao';
 
 export function main() {
@@ -13,6 +14,8 @@ export function main() {
             bing(process.argv[3]);
         } else if (process.argv[2] === 'douyu') {
             douyu(process.argv[3]);
+        } else if (process.argv[2] === 'npmjs') {
+            npmjs(process.argv[3]);
         } else if (process.argv[2] === 'taobao') {
             taobao(process.argv[3]);
         }
