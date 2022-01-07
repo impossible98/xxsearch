@@ -30,6 +30,8 @@ export function help() {
     console.log('');
     console.log('  npmjs: search npmjs');
     console.log('');
+    console.log('  openvsx: search openvsx');
+    console.log('');
     console.log('  taobao: search taobao');
     console.log('');
     console.log('  tmall: search tmall');

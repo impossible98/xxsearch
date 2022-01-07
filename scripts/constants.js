@@ -42,13 +42,16 @@ export const binName = '${constants[1]}';
         );
         await fs.writeFile(
             this.pkgPath,
-            pkg.replace(/"version": "(.*)",/g, `"version": "${constants[2]}",`),
+            pkg.replace(
+                /"version": "(.*)",/g,
+                `"version": "${constants[2]}",`,
+            ),
         );
         await fs.writeFile(
             this.pkgLockPath,
             pkgLock.replace(
-                /"name": "(.*)",\n    "version": "(.*)",/g,
-                `"name": "${constants[1]}",\n    "version": "${constants[2]}",`,
+                /\n    "version": "(.*)"/,
+                `\n    "version": "${constants[2]}"`,
             ),
         );
     }

@@ -13,6 +13,7 @@ import { indienova } from './indienova';
 import { jd } from './jd';
 import { libraries } from './libraries';
 import { npmjs } from './npmjs';
+import { openvsx } from './openvsx';
 import { taobao } from './taobao';
 import { tmall } from './tmall';
 
@@ -38,6 +39,8 @@ export function main() {
             libraries(process.argv[3]);
         } else if (process.argv[2] === 'npmjs') {
             npmjs(process.argv[3]);
+        } else if (process.argv[2] === 'openvsx') {
+            openvsx(process.argv[3]);
         } else if (process.argv[2] === 'taobao') {
             taobao(process.argv[3]);
         } else if (process.argv[2] === 'tmall') {
