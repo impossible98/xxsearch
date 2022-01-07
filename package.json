@@ -1,8 +1,11 @@
 {
     "name": "xxsearch",
-    "version": "0.0.2",
+    "version": "0.1.0",
     "bin": {
         "xxsearch": "./dist/main.js"
+    },
+    "dependencies": {
+        "open": "^8.4.0"
     },
     "devDependencies": {
         "@types/node": "^16.0.0",

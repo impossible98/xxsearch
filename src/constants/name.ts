@@ -1,2 +1,2 @@
-export const appName = 'Template-ts';
-export const binName = 'template-ts';
+export const appName = 'xxSearch';
+export const binName = 'xxsearch';
