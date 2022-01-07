@@ -3,10 +3,13 @@
 import { Octokit } from '@octokit/core';
 import open from 'open';
 
+import { ConfigApp } from '../config/mod';
 import { Color } from '../utils/color';
 import { question, rl } from '../utils/question';
 const octokit = new Octokit();
 const color = new Color();
+const configApp = new ConfigApp();
+const config = configApp.getConfig();
 
 export async function github(input: string) {
     let result = await octokit.request('GET /search/repositories', {
@@ -44,7 +47,9 @@ export async function github(input: string) {
         answer = await question('Please input the id (press `q` to exit): ');
 
         if (Number(answer) > 0 && Number(answer) <= result.data.items.length) {
-            open(result.data.items[Number(answer) - 1].html_url);
+            if (config.open) {
+                open(result.data.items[Number(answer) - 1].html_url);
+            }
             rl.close();
             break;
         } else if (answer.toLowerCase() === 'q') {

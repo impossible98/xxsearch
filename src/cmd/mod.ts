@@ -3,6 +3,8 @@ import * as process from 'process';
 import { help } from './help';
 import { version } from './version';
 
+import { ConfigApp, defaultConfigToml } from '../config/mod';
+
 import { bing } from './bing';
 import { cnbing } from './cnbing';
 import { docker } from './docker';
@@ -18,7 +20,13 @@ import { openvsx } from './openvsx';
 import { taobao } from './taobao';
 import { tmall } from './tmall';
 
+const configApp = new ConfigApp();
+
 export function main() {
+    if (!configApp.exitsConfig()) {
+        configApp.writeConfig(defaultConfigToml);
+    }
+
     if (process.argv.length === 4) {
         if (process.argv[2] === 'bing') {
             bing(process.argv[3]);
