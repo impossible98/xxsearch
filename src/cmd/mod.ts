@@ -10,6 +10,7 @@ import { duckduckgo } from './duckduckgo';
 import { github } from './github';
 import { google } from './google';
 import { jd } from './jd';
+import { libraries } from './libraries';
 import { npmjs } from './npmjs';
 import { taobao } from './taobao';
 import { tmall } from './tmall';
@@ -30,6 +31,8 @@ export function main() {
             google(process.argv[3]);
         } else if (process.argv[2] === 'jd') {
             jd(process.argv[3]);
+        } else if (process.argv[2] === 'libraries') {
+            libraries(process.argv[3]);
         } else if (process.argv[2] === 'npmjs') {
             npmjs(process.argv[3]);
         } else if (process.argv[2] === 'taobao') {
