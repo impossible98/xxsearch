@@ -1,13 +1,12 @@
 import * as process from 'process';
 
-import * as constants from '../constants/mod';
-import { help } from './help';
-
 import { bing } from './bing';
 import { douyu } from './douyu';
+import { help } from './help';
 import { npmjs } from './npmjs';
 import { taobao } from './taobao';
 import { tmall } from './tmall';
+import { version } from './version';
 
 export function main() {
     if (process.argv.length === 4) {
@@ -24,7 +23,7 @@ export function main() {
         }
     } else if (process.argv.length === 3) {
         if (process.argv[2] === 'version') {
-            console.log(`${constants.AppName} version: ${constants.Version}`);
+            version();
         } else {
             help();
         }

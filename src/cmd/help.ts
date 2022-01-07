@@ -1,5 +1,3 @@
-import * as process from 'process';
-
 import * as constants from '../constants/mod';
 
 export function help() {
