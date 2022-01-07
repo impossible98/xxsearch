@@ -2,6 +2,10 @@ const childProcess = require('child_process');
 const process = require('process');
 const readline = require('readline');
 
+const { Constants } = require('./constants');
+
+const constants = new Constants();
+
 const rl = readline.createInterface({
     input: process.stdin,
     output: process.stdout,
@@ -21,11 +25,14 @@ class Commit {
     }
 
     async exec() {
-        childProcess.exec('git add --all');
+        const value = await constants.getConstants();
         let answer;
         let answer2;
         let answer3;
         let answer4;
+
+        childProcess.exec('git add --all');
+        console.log('Building ' + value[0] + ' ' + value[2]);
 
         for (; true;) {
             answer = await this.question('Please input your commit type: ');
