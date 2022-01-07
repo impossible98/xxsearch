@@ -1,5 +1,5 @@
 APP_NAME := xxSearch
-APP_VERSION := 0.7.0
+APP_VERSION := 0.8.0
 BIN_NAME := xxsearch
 
 SHELL := /bin/bash
