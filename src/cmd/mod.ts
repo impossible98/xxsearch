@@ -9,6 +9,7 @@ import { douyu } from './douyu';
 import { duckduckgo } from './duckduckgo';
 import { github } from './github';
 import { google } from './google';
+import { indienova } from './indienova';
 import { jd } from './jd';
 import { libraries } from './libraries';
 import { npmjs } from './npmjs';
@@ -29,6 +30,8 @@ export function main() {
             github(process.argv[3]);
         } else if (process.argv[2] === 'google') {
             google(process.argv[3]);
+        } else if (process.argv[2] === 'indienova') {
+            indienova(process.argv[3]);
         } else if (process.argv[2] === 'jd') {
             jd(process.argv[3]);
         } else if (process.argv[2] === 'libraries') {
@@ -39,6 +42,8 @@ export function main() {
             taobao(process.argv[3]);
         } else if (process.argv[2] === 'tmall') {
             tmall(process.argv[3]);
+        } else {
+            help();
         }
     } else if (process.argv.length === 3) {
         if (process.argv[2] === 'version') {
