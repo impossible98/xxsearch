@@ -6,6 +6,7 @@ import open from 'open';
 import { ConfigApp } from '../config/mod';
 import { Color } from '../utils/color';
 import { question, rl } from '../utils/question';
+
 const octokit = new Octokit();
 const color = new Color();
 const configApp = new ConfigApp();
