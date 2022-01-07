@@ -7,6 +7,7 @@ import { bing } from './bing';
 import { douyu } from './douyu';
 import { npmjs } from './npmjs';
 import { taobao } from './taobao';
+import { tmall } from './tmall';
 
 export function main() {
     if (process.argv.length === 4) {
@@ -18,11 +19,14 @@ export function main() {
             npmjs(process.argv[3]);
         } else if (process.argv[2] === 'taobao') {
             taobao(process.argv[3]);
+        } else if (process.argv[2] === 'tmall') {
+            tmall(process.argv[3]);
         }
     } else if (process.argv.length === 3) {
         if (process.argv[2] === 'version') {
             console.log(`${constants.AppName} version: ${constants.Version}`);
+        } else {
+            help();
         }
-        help();
     }
 }
