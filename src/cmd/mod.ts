@@ -4,12 +4,15 @@ import * as constants from '../constants/mod';
 import { help } from './help';
 
 import { bing } from './bing';
+import { douyu } from './douyu';
 import { taobao } from './taobao';
 
 export function main() {
     if (process.argv.length === 4) {
         if (process.argv[2] === 'bing') {
             bing(process.argv[3]);
+        } else if (process.argv[2] === 'douyu') {
+            douyu(process.argv[3]);
         } else if (process.argv[2] === 'taobao') {
             taobao(process.argv[3]);
         }
