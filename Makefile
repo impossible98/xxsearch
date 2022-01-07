@@ -1,5 +1,5 @@
 APP_NAME := xxSearch
-APP_VERSION := 0.15.1
+APP_VERSION := 0.15.2
 BIN_NAME := xxsearch
 
 SHELL := /bin/bash
@@ -11,7 +11,7 @@ build:
 	node ./scripts/constants.js
 	npm run dev
 
-commit: Makefile fmt
+commit: build fmt
 	node ./scripts/commit.js
 
 dev: lint

@@ -33,7 +33,7 @@ class Commit {
         let answer3;
         let answer4;
 
-        console.log(color.green('\nBuilding ' + value[0] + ' ' + value[2]));
+        console.log(color.greenBold('\nBuilding ' + value[0] + ' ' + value[2]));
         childProcess.exec('git add --all');
 
         for (; true;) {
@@ -68,7 +68,7 @@ class Commit {
             }
         }
 
-        console.log(`${answer}${answer2}: ${answer3.trim()}`);
+        console.log(`${color.green(answer)}${color.green(answer2)}: ${color.green(answer3.trim())}`);
         answer4 = await this.question(`Are you sure to git commit? (${color.green('y')}/${color.red('N')}) `);
 
         if (answer4.toLowerCase() === 'y') {
