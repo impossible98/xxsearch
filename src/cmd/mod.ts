@@ -1,16 +1,18 @@
 import * as process from 'process';
 
+import { help } from './help';
+import { version } from './version';
+
 import { bing } from './bing';
 import { cnbing } from './cnbing';
 import { douyu } from './douyu';
 import { duckduckgo } from './duckduckgo';
 import { github } from './github';
 import { google } from './google';
-import { help } from './help';
+import { jd } from './jd';
 import { npmjs } from './npmjs';
 import { taobao } from './taobao';
 import { tmall } from './tmall';
-import { version } from './version';
 
 export function main() {
     if (process.argv.length === 4) {
@@ -26,6 +28,8 @@ export function main() {
             github(process.argv[3]);
         } else if (process.argv[2] === 'google') {
             google(process.argv[3]);
+        } else if (process.argv[2] === 'jd') {
+            jd(process.argv[3]);
         } else if (process.argv[2] === 'npmjs') {
             npmjs(process.argv[3]);
         } else if (process.argv[2] === 'taobao') {
