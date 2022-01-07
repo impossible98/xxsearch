@@ -1,3 +1,4 @@
+// Example: https://www.bing.com/search?q=demo
 import * as process from 'process';
 
 import open from 'open';
