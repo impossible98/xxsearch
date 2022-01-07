@@ -1,5 +1,5 @@
 APP_NAME := xxSearch
-APP_VERSION := 0.0.1
+APP_VERSION := 0.0.2
 BIN_NAME := xxsearch
 
 SHELL := /bin/bash
