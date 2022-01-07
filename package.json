@@ -1,12 +1,11 @@
 {
     "name": "xxsearch",
-    "version": "0.15.6",
+    "version": "0.16.0",
     "bin": {
         "xxsearch": "./dist/main.js"
     },
     "dependencies": {
         "@iarna/toml": "^2.2.5",
-        "@ltd/j-toml": "^1.24.0",
         "@octokit/core": "^3.5.1",
         "open": "^8.4.0"
     },

@@ -5,6 +5,7 @@ import { version } from './version';
 
 import { ConfigApp, defaultConfigToml } from '../config/mod';
 
+import { alpinelinux } from './alpinelinux';
 import { bing } from './bing';
 import { cnbing } from './cnbing';
 import { docker } from './docker';
@@ -28,7 +29,9 @@ export function main() {
     }
 
     if (process.argv.length === 4) {
-        if (process.argv[2] === 'bing') {
+        if (process.argv[2] === 'alpinelinux') {
+            alpinelinux(process.argv[3]);
+        } else if (process.argv[2] === 'bing') {
             bing(process.argv[3]);
         } else if (process.argv[2] === 'cnbing') {
             cnbing(process.argv[3]);

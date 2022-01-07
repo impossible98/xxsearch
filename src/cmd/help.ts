@@ -10,6 +10,8 @@ export function help() {
     console.log('  version: show the version');
     console.log('');
 
+    console.log('  alpinelinux: search alpinelinux');
+    console.log('');
     console.log('  bing: search bing');
     console.log('');
     console.log('  cnbing: search cnbing');
