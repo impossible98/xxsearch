@@ -2,6 +2,7 @@ import * as process from 'process';
 
 import { bing } from './bing';
 import { douyu } from './douyu';
+import { github } from './github';
 import { google } from './google';
 import { help } from './help';
 import { npmjs } from './npmjs';
@@ -15,6 +16,8 @@ export function main() {
             bing(process.argv[3]);
         } else if (process.argv[2] === 'douyu') {
             douyu(process.argv[3]);
+        } else if (process.argv[2] === 'github') {
+            github(process.argv[3]);
         } else if (process.argv[2] === 'google') {
             google(process.argv[3]);
         } else if (process.argv[2] === 'npmjs') {
