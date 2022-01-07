@@ -40,10 +40,14 @@ export async function github(input: string) {
         }
     }
     for (; true;) {
-        let answer = await question('Please input the id: ');
+        let answer: any;
+        answer = await question('Please input the id (press `q` to exit): ');
 
         if (Number(answer) > 0 && Number(answer) <= result.data.items.length) {
             open(result.data.items[Number(answer) - 1].html_url);
+            rl.close();
+            break;
+        } else if (answer.toLowerCase() === 'q') {
             rl.close();
             break;
         } else {
