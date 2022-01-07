@@ -5,6 +5,7 @@ import { version } from './version';
 
 import { bing } from './bing';
 import { cnbing } from './cnbing';
+import { docker } from './docker';
 import { douyu } from './douyu';
 import { duckduckgo } from './duckduckgo';
 import { github } from './github';
@@ -23,6 +24,8 @@ export function main() {
             bing(process.argv[3]);
         } else if (process.argv[2] === 'cnbing') {
             cnbing(process.argv[3]);
+        } else if (process.argv[2] === 'docker') {
+            docker(process.argv[3]);
         } else if (process.argv[2] === 'douyu') {
             douyu(process.argv[3]);
         } else if (process.argv[2] === 'duckduckgo') {

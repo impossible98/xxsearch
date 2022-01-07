@@ -12,7 +12,7 @@ export function help() {
     console.log('');
     console.log('  cnbing: search cnbing');
     console.log('');
-    console.log('  douyu: search douyu');
+    console.log('  docker: search docker');
     console.log('');
     console.log('  douyu: search douyu');
     console.log('');
